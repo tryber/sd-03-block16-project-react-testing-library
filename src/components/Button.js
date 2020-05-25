@@ -9,6 +9,7 @@ const Button = ({
   dataTestId,
   disabled,
   onClick,
+  dataTestId,
 }) => (
   <button
     onClick={onClick}
@@ -16,6 +17,7 @@ const Button = ({
     disabled={disabled}
     data-testid={dataTestId}
     type="button"
+    data-testid={dataTestId}
   >
     {children}
   </button>
@@ -27,6 +29,7 @@ Button.propTypes = {
   dataTestId: PropTypes.string,
   disabled: PropTypes.bool,
   onClick: PropTypes.func.isRequired,
+  dataTestId: PropTypes.string,
 };
 
 Button.defaultProps = {
@@ -34,6 +37,7 @@ Button.defaultProps = {
   className: '',
   dataTestId: undefined,
   disabled: false,
+  dataTestId: undefined,
 };
 
 export default Button;
