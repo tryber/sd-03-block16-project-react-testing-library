@@ -5,6 +5,6 @@ function forFunction(index, getByText) {
     const nextPokemon = getByText('Próximo pokémon');
     fireEvent.click(nextPokemon);
   }
-};
+}
 
 export default forFunction;

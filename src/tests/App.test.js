@@ -67,7 +67,8 @@ describe('tests App.js', () => {
   });
 
   test('redirect to Not Found page', () => {
-    const { getByText } = renderWithRouter(<App />, { route: '/not-found' });
+    const { getByText, history } = renderWithRouter(<App />);
+    history.push('/unreachablePageSrc');
 
     expect(getByText('Page requested not found')).toBeInTheDocument();
   });

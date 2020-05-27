@@ -38,7 +38,7 @@ describe('tests Pokemon.js', () => {
 
     data.forEach(({ averageWeight: { value, measurementUnit } }) => {
       const averageWeight = getByText(
-        `Average weight:${value}${measurementUnit}`,
+        `Average weight: ${value}${measurementUnit}`,
       );
       expect(averageWeight).toBeInTheDocument();
       fireEvent.click(nextPokemon);
@@ -74,7 +74,7 @@ describe('tests Pokemon.js', () => {
     const { getByText, history } = renderWithRouter(<App />);
 
     const moreDetails = getByText('More details');
-    const id = data[0].id;
+    const { id } = data[0];
 
     fireEvent.click(moreDetails);
     expect(history.location.pathname).toBe(`/pokemons/${id}`);
